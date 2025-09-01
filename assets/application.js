@@ -1,1 +1,1 @@
-// Put your application javascript here
+// Pending to put application javascript here 

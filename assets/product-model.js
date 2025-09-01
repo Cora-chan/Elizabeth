@@ -1,3 +1,4 @@
+// product model
 class ProductModel extends HTMLElement {
     constructor() {
         super();
