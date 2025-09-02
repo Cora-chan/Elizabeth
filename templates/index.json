@@ -9,6 +9,34 @@
  */
 {
   "sections": {
+    "17568180090d5402c3": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_f449dd8_64kL8Y": {
+          "type": "ai_gen_block_f449dd8",
+          "settings": {
+            "background_video": "",
+            "demo_video": "",
+            "heading": "Watch Our Demo",
+            "description": "Discover how our product can transform your business",
+            "banner_height": 600,
+            "overlay_opacity": 0.4,
+            "heading_size": 48,
+            "text_size": 18,
+            "background_color": "#000000",
+            "text_color": "#582929",
+            "play_button_color": "#ffffff",
+            "play_button_icon_color": "#000000",
+            "play_button_size": 80
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_f449dd8_64kL8Y"
+      ],
+      "settings": {}
+    },
     "featured-collection": {
       "type": "featured-collection",
       "settings": {
@@ -19,6 +47,7 @@
     }
   },
   "order": [
+    "17568180090d5402c3",
     "featured-collection"
   ]
 }
