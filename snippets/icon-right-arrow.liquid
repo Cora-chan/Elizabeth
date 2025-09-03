@@ -1,0 +1,13 @@
+
+
+   {%- comment -%}
+  icon-right-arrow.liquid
+  Usage: {% render 'icon-right-arrow', class: 'w-5 h-5 text-black' %}
+{%- endcomment -%}
+
+{%- assign icon_classes = class | default: 'w-6 h-6' -%}
+
+ <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="{{icon_classes}}">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+  </svg>
+
