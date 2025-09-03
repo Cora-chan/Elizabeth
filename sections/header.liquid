@@ -7,7 +7,18 @@
     endif
 %}
 
-<div class="relative bg-white" x-data="{ mobileMenuOpen: false, searchBarOpen: false }" x-cloak>
+<div 
+  x-data="{ hovered: false, mobileMenuOpen: false, searchBarOpen: false }" 
+  @mouseenter="hovered = true" 
+  @mouseleave="hovered = false"
+  :class="hovered 
+    ? 'bg-white text-gray-900 shadow-md' 
+    : 'bg-transparent text-white'"
+  class="absolute top-0 left-0 w-full z-50 transition-colors duration-300"
+  x-cloak
+>
+
+
     <div class="mx-auto px-4 sm:px-6">
         <div class="flex justify-center items-center py-6 md:justify-start md:space-x-10">
             <!-- STORE NAME / STORE LOGO -->
