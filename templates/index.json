@@ -32,11 +32,45 @@
         "featured_collection": "all",
         "number_of_products_to_show": 4
       }
+    },
+    "scrolling_marquee_banner_3bHg97": {
+      "type": "scrolling-marquee-banner",
+      "blocks": {
+        "item_ayNEMw": {
+          "type": "item",
+          "settings": {
+            "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" class=\"w-4 h-4\" fill=\"none\" viewbox=\"0 0 24 24\" stroke=\"currentColor\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M12 3v1m0 16v1m8.66-11.66l-.71.71M4.05 19.95l-.71.71M21 12h1M3 12H2m16.95 7.95l-.71-.71M4.05 4.05l-.71-.71M12 21a9 9 0 100-18 9 9 0 000 18z\"></path></svg>",
+            "text": "Made for modern sleep"
+          }
+        },
+        "item_hxdAxc": {
+          "type": "item",
+          "settings": {
+            "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" class=\"w-4 h-4\" fill=\"none\" viewbox=\"0 0 24 24\" stroke=\"currentColor\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M12 3v1m0 16v1m8.66-11.66l-.71.71M4.05 19.95l-.71.71M21 12h1M3 12H2m16.95 7.95l-.71-.71M4.05 4.05l-.71-.71M12 21a9 9 0 100-18 9 9 0 000 18z\"></path></svg>",
+            "text": "Softer with every wash"
+          }
+        },
+        "item_w63kFn": {
+          "type": "item",
+          "settings": {
+            "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" class=\"w-4 h-4\" fill=\"none\" viewbox=\"0 0 24 24\" stroke=\"currentColor\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M12 3v1m0 16v1m8.66-11.66l-.71.71M4.05 19.95l-.71.71M21 12h1M3 12H2m16.95 7.95l-.71-.71M4.05 4.05l-.71-.71M12 21a9 9 0 100-18 9 9 0 000 18z\"></path></svg>",
+            "text": "Clean, conscious comfort"
+          }
+        }
+      },
+      "block_order": [
+        "item_ayNEMw",
+        "item_hxdAxc",
+        "item_w63kFn"
+      ],
+      "name": "Scrolling marquee",
+      "settings": {}
     }
   },
   "order": [
     "17568180090d5402c3",
     "master_banner_Ut9cVa",
+    "scrolling_marquee_banner_3bHg97",
     "featured-collection"
   ]
 }
