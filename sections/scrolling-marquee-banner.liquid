@@ -1,0 +1,77 @@
+<!-- sections/scrolling-marquee.liquid -->
+<section id="scrolling-marquee-{{ section.id }}" class="bg-gray-900 text-white">
+  <div class="overflow-hidden whitespace-nowrap relative">
+    <div class="animate-marquee inline-block">
+      {% for block in section.blocks %}
+        <span class="inline-flex items-center gap-2 mx-6 text-sm md:text-base">
+          {% if block.settings.icon != blank %}
+            {{ block.settings.icon }}
+          {% endif %}
+          {{ block.settings.text }}
+        </span>
+      {% endfor %}
+      {% comment %}
+      Duplicate content for seamless scroll
+      {% endcomment %}
+      {% for block in section.blocks %}
+        <span class="inline-flex items-center gap-2 mx-6 text-sm md:text-base">
+          {% if block.settings.icon != blank %}
+            {{ block.settings.icon }}
+          {% endif %}
+          {{ block.settings.text }}
+        </span>
+      {% endfor %}
+    </div>
+  </div>
+
+  <style>
+    /* Tailwind can't generate keyframes dynamically, so we add custom keyframes here */
+    @keyframes marquee {
+      0% { transform: translateX(0%); }
+      100% { transform: translateX(-50%); }
+    }
+    .animate-marquee {
+      display: inline-block;
+      animation: marquee linear infinite;
+      animation-duration: 20s; /* adjust speed */
+      will-change: transform;
+    }
+  </style>
+
+  {% schema %}
+  {
+    "name": "Scrolling Marquee Banner",
+    "settings": [],
+    "blocks": [
+      {
+        "type": "item",
+        "name": "Marquee Item",
+        "settings": [
+          {
+            "type": "textarea",
+            "id": "icon",
+            "label": "SVG Icon (optional)",
+            "default": "<svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M12 3v1m0 16v1m8.66-11.66l-.71.71M4.05 19.95l-.71.71M21 12h1M3 12H2m16.95 7.95l-.71-.71M4.05 4.05l-.71-.71M12 21a9 9 0 100-18 9 9 0 000 18z' /></svg>"
+          },
+          {
+            "type": "text",
+            "id": "text",
+            "label": "Text",
+            "default": "Made for modern eep"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Scrolling marquee",
+        "blocks": [
+          { "type": "item", "settings": { "text": "Made for modern sleep" } },
+          { "type": "item", "settings": { "text": "Softer with every wash" } },
+          { "type": "item", "settings": { "text": "Clean, conscious comfort" } }
+        ]
+      }
+    ]
+  }
+  {% endschema %}
+</section>
