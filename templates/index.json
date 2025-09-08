@@ -20,10 +20,23 @@
         "featured_collection": "all",
         "number_of_products_to_show": 12
       }
+    },
+    "master_banner_Ut9cVa": {
+      "type": "master-banner",
+      "name": "Master Banner",
+      "settings": {
+        "heading": "Welcome to Our Store",
+        "subheading": "Discover our latest collection",
+        "media_1": "",
+        "media_1_type": "video",
+        "media_2": "",
+        "media_2_type": "video"
+      }
     }
   },
   "order": [
     "17568180090d5402c3",
+    "master_banner_Ut9cVa",
     "featured-collection"
   ]
 }
