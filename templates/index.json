@@ -25,14 +25,6 @@
         "media_2_type": "image"
       }
     },
-    "featured-collection": {
-      "type": "featured-collection",
-      "settings": {
-        "title": "Featured Collection",
-        "featured_collection": "all",
-        "number_of_products_to_show": 12
-      }
-    },
     "short_scroll_banner_dbJA9F": {
       "type": "short-scroll-banner",
       "blocks": {
@@ -71,7 +63,15 @@
         "aria_label": "Site short banner",
         "small_note": "note",
         "cycle_interval": 3000,
-        "bg_color": "#FFFFFF"
+        "bg_color": "#975757"
+      }
+    },
+    "featured-collection": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Featured Collection",
+        "featured_collection": "all",
+        "number_of_products_to_show": 12
       }
     }
   },
