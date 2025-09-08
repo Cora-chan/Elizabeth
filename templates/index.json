@@ -13,6 +13,18 @@
       "type": "_blocks",
       "settings": {}
     },
+    "master_banner_Ut9cVa": {
+      "type": "master-banner",
+      "name": "Master Banner",
+      "settings": {
+        "heading": "Welcome to Our Store",
+        "subheading": "Discover our latest collection",
+        "media_1": "https://cdn.shopify.com/videos/c/o/v/d422b3ff1b4442279ff3a20eb79f49ab.mp4",
+        "media_1_type": "video",
+        "media_2": "https://cdn.shopify.com/s/files/1/0882/1646/9802/files/pexels-godisable-jacob-226636-949670.jpg?v=1756831517",
+        "media_2_type": "image"
+      }
+    },
     "featured-collection": {
       "type": "featured-collection",
       "settings": {
@@ -24,6 +36,7 @@
   },
   "order": [
     "17568180090d5402c3",
+    "master_banner_Ut9cVa",
     "featured-collection"
   ]
 }
