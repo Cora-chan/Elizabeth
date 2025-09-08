@@ -25,47 +25,6 @@
         "media_2_type": "image"
       }
     },
-    "short_scroll_banner_dbJA9F": {
-      "type": "short-scroll-banner",
-      "blocks": {
-        "subtitle_bNg33h": {
-          "type": "subtitle",
-          "settings": {
-            "subtitle_text": "New: Summer Collection",
-            "icon_type": "clothes",
-            "custom_svg": "placefor SVG code"
-          }
-        },
-        "subtitle_bgz7r3": {
-          "type": "subtitle",
-          "settings": {
-            "subtitle_text": "For Her: Styles You'll Love",
-            "icon_type": "female",
-            "custom_svg": "placefor SVG code"
-          }
-        },
-        "subtitle_UCUgb3": {
-          "type": "subtitle",
-          "settings": {
-            "subtitle_text": "Trend Picks — Limited Stock",
-            "icon_type": "fashion",
-            "custom_svg": "placefor SVG code"
-          }
-        }
-      },
-      "block_order": [
-        "subtitle_bNg33h",
-        "subtitle_bgz7r3",
-        "subtitle_UCUgb3"
-      ],
-      "name": "Short scrolling banner (3 items)",
-      "settings": {
-        "aria_label": "Site short banner",
-        "small_note": "note",
-        "cycle_interval": 3000,
-        "bg_color": "#975757"
-      }
-    },
     "featured-collection": {
       "type": "featured-collection",
       "settings": {
@@ -78,7 +37,6 @@
   "order": [
     "17568180090d5402c3",
     "master_banner_Ut9cVa",
-    "short_scroll_banner_dbJA9F",
     "featured-collection"
   ]
 }
