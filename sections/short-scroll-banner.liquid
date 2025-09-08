@@ -77,42 +77,78 @@
     })();
   </script>
 
-  {% schema %}
-  {
-    "name": "Short Scrolling Banner",
-    "settings": [
-      { "type": "text", "id": "aria_label", "label": "ARIA label", "default": "Site short banner" },
-      { "type": "text", "id": "small_note", "label": "Small note", "default": "" },
-      { "type": "number", "id": "cycle_interval", "label": "Cycle interval (ms)", "default": 3000, "min": 1000, "max": 10000, "step": 500 },
-      { "type": "color", "id": "bg_color", "label": "Background color", "default": "#FFFFFF" }
-    ],
-    "blocks": [
-      {
-        "type": "subtitle",
-        "name": "Subtitle",
-        "settings": [
-          { "type": "text", "id": "subtitle_text", "label": "Subtitle text", "default": "New arrivals — shop now" },
-          { "type": "select", "id": "icon_type", "label": "Icon", "options": [
-              { "value": "clothes", "label": "Clothes" },
-              { "value": "female", "label": "Female" },
-              { "value": "fashion", "label": "Fashion" }
-            ], "default": "clothes"
-          },
-          { "type": "textarea", "id": "custom_svg", "label": "Custom SVG (optional)", "default": "" }
-        ]
-      }
-    ],
-    "presets": [
-      {
-        "name": "Short scrolling banner (3 items)",
-        "category": "Banner",
-        "blocks": [
-          { "type": "subtitle", "settings": { "subtitle_text": "New: Summer Collection", "icon_type": "clothes" } },
-          { "type": "subtitle", "settings": { "subtitle_text": "For Her: Styles You'll Love", "icon_type": "female" } },
-          { "type": "subtitle", "settings": { "subtitle_text": "Trend Picks — Limited Stock", "icon_type": "fashion" } }
-        ]
-      }
-    ]
-  }
-  {% endschema %}
+ {% schema %}
+{
+  "name": "Short Scrolling Banner",
+  "settings": [
+    {
+      "type": "text",
+      "id": "aria_label",
+      "label": "ARIA label",
+      "default": "Site short banner"
+    },
+    {
+      "type": "text",
+      "id": "small_note",
+      "label": "Small note",
+      "default": "note"
+    },
+    {
+      "type": "number",
+      "id": "cycle_interval",
+      "label": "Cycle interval (ms)",
+      "default": 3000
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background color",
+      "default": "#FFFFFF"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "subtitle",
+      "name": "Subtitle",
+      "settings": [
+        {
+          "type": "text",
+          "id": "subtitle_text",
+          "label": "Subtitle text",
+          "default": "New arrivals — shop now"
+        },
+        {
+          "type": "select",
+          "id": "icon_type",
+          "label": "Icon",
+          "options": [
+            { "value": "clothes", "label": "Clothes" },
+            { "value": "female", "label": "Female" },
+            { "value": "fashion", "label": "Fashion" }
+          ],
+          "default": "clothes"
+        },
+        {
+          "type": "textarea",
+          "id": "custom_svg",
+          "label": "Custom SVG (optional)",
+          "default": "placefor SVG code"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Short scrolling banner (3 items)",
+      "category": "Banner",
+      "blocks": [
+        { "type": "subtitle", "settings": { "subtitle_text": "New: Summer Collection", "icon_type": "clothes" } },
+        { "type": "subtitle", "settings": { "subtitle_text": "For Her: Styles You'll Love", "icon_type": "female" } },
+        { "type": "subtitle", "settings": { "subtitle_text": "Trend Picks — Limited Stock", "icon_type": "fashion" } }
+      ]
+    }
+  ]
+}
+{% endschema %}
+
 </section>
