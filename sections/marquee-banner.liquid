@@ -47,7 +47,7 @@
 
 <section class="p-4" style="background-color: {{ section.settings.bg_color }};">
   <div id="marquee" class="flex overflow-hidden select-none">
-    <span class="marquee__content font-roboto shrink-0 flex justify-around min-w-full gap-4" aria-hidden="true" style="color: {{ section.settings.text_color }};">
+    <span class="marquee__content font-roboto shrink-0 flex justify-around min-w-full gap-4" aria-hidden="true" style="color: {{ section.settings.text_color }};">       
      {{ section.settings.banner_text }}
     </span>
     <span class="marquee__content font-roboto shrink-0 flex justify-around min-w-full gap-4" aria-hidden="true" style="color: {{ section.settings.text_color }};">
@@ -74,21 +74,4 @@
 </style>
 
 
-{% comment %} 
-{% comment %} <script>
-document.addEventListener('DOMContentLoaded', function() {
-  const container = document.getElementById('marquee-container');
-  const speed = {{ section.settings.speed }}; 
 
-  let pos = 0;
-  function scrollTicker() {
-    pos -= speed * 0.3; // smoother speed, scales nicely
-    const containerWidth = container.scrollWidth / 2; // we duplicated text
-    if (Math.abs(pos) >= containerWidth) pos = 0; // reset only after one full width
-    container.style.transform = `translateX(${pos}px)`;
-    requestAnimationFrame(scrollTicker);
-  }
-
-  scrollTicker();
-}); {% endcomment %}
-</script> {% endcomment %}
