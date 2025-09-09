@@ -21,12 +21,14 @@
         "media_2_type": "image"
       }
     },
-    "featured-collection": {
-      "type": "featured-collection",
+    "marquee_banner_PrQQVa": {
+      "type": "marquee-banner",
+      "name": "Marquee Banner",
       "settings": {
-        "title": "Featured Collection",
-        "featured_collection": "all",
-        "number_of_products_to_show": 4
+        "banner_text": "Fashion is more than clothing—it’s a language of self-expression, culture, and creativity.",
+        "speed": 2,
+        "bg_color": "#1D1813",
+        "text_color": "#FFFFFF"
       }
     },
     "feature_statement_daktJW": {
@@ -38,10 +40,19 @@
         "background_color": "#967859",
         "text_color": "#ffffff"
       }
+    },
+    "featured-collection": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Featured Collection",
+        "featured_collection": "all",
+        "number_of_products_to_show": 4
+      }
     }
   },
   "order": [
     "master_banner_Ut9cVa",
+    "marquee_banner_PrQQVa",
     "feature_statement_daktJW",
     "featured-collection"
   ]
