@@ -1,0 +1,66 @@
+{% schema %}
+{
+  "name": "Feature Statement",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Your Feature Statement Here"
+    },
+    {
+      "type": "textarea",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Optional supporting text."
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#967859"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#ffffff"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Feature Statement Banner",
+      "category": "Banner"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+<style>
+/* Optional: You can add additional custom CSS here if needed */
+</style>
+{% endstylesheet %}
+
+{% javascript %}
+<script>
+// Optional JS if needed
+</script>
+{% endjavascript %}
+
+<!-- Section HTML -->
+<section 
+  class="w-full py-12 text-center" 
+  style="background-color: {{ section.settings.background_color }}; color: {{ section.settings.text_color }};"
+>
+  <div class="container mx-auto px-4">
+    <h1 class="text-4xl md:text-5xl font-roboto text-white">
+      {{ section.settings.heading }}
+    </h1>
+    {% if section.settings.subheading != blank %}
+      <p class="text-lg md:text-xl font-story">
+        {{ section.settings.subheading }}
+      </p>
+    {% endif %}
+  </div>
+</section>
