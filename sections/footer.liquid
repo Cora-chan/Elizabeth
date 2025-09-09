@@ -1,0 +1,106 @@
+
+
+{% schema %}
+{
+  "name": "Footer",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "footer_logo",
+      "label": "Footer Logo"
+    },
+    {
+      "type": "textarea",
+      "id": "footer_text",
+      "label": "Footer Text",
+      "default": "© 2025 Yue's demo Shopify Store. All rights reserved."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "menu",
+      "name": "Menu Column",
+      "settings": [
+        {
+          "type": "link_list",
+          "id": "menu",
+          "label": "Menu"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "name": "Custom Text",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading",
+          "default": "Contact Us"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Content",
+          "default": "<p>123 Example St, City</p><p>email@example.com</p>"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Footer",
+      "category": "Footer"
+    }
+  ]
+}
+{% endschema %}
+
+<footer class="bg-leather text-white">
+  <div class="max-w-7xl mx-auto px-4 py-10">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+      <!-- Logo and Footer Text -->
+      <div>
+        {% if section.settings.footer_logo %}
+          <img src="{{ section.settings.footer_logo | image_url: width: 200 }}" alt="Footer logo" class="mb-4">
+        {% endif %}
+        
+      </div>
+
+      <!-- Loop through blocks for menus and text columns -->
+      {% for block in section.blocks %}
+        {% case block.type %}
+          {% when 'menu' %}
+            <div>
+              {% assign menu = linklists[block.settings.menu] %}
+              {% if menu and menu.links.size > 0 %}
+                <h3 class="text-lg font-semibold mb-3 font-roboto text-white">{{ menu.title }}</h3>
+                <ul class="space-y-2">
+                  {% for link in menu.links %}
+                    <li>
+                      <a href="{{ link.url }}" class="text-white hover:text-white transition">
+                        {{ link.title }}
+                      </a>
+                    </li>
+                  {% endfor %}
+                </ul>
+              {% endif %}
+            </div>
+
+          {% when 'text' %}
+            <div>
+              <h3 class="text-lg font-semibold mb-3 font-roboto text-white">{{ block.settings.heading }}</h3>
+              <div class="text-white text-sm">
+                {{ block.settings.content }}
+              </div>
+            </div>
+        {% endcase %}
+      {% endfor %}
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="mt-8 pt-6 border-t border-white text-center text-sm text-white">
+      {{ section.settings.footer_text }}
+    </div>
+  </div>
+</footer>

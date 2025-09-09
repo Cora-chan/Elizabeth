@@ -42,8 +42,7 @@ html {
   -o-tab-size: 4;
      tab-size: 4;
   /* 3 */
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  /* 4 */
+  font-family:"roboto", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 /*
@@ -863,6 +862,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 1.5rem;
 }
 
+.min-w-full {
+  min-width: 100%;
+}
+
 .max-w-6xl {
   max-width: 72rem;
 }
@@ -961,6 +964,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .justify-start {
   justify-content: flex-start;
+}
+
+.justify-around {
+  justify-content: space-around;
 }
 
 .justify-end {
@@ -1136,6 +1143,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .border-gray-200 {
   --tw-border-opacity: 1;
   border-color: rgb(229 231 235 / var(--tw-border-opacity));
+}
+
+.bg-leather {
+  --tw-bg-opacity: 1;
+  background-color: #967858
 }
 
 .bg-gray-900 {

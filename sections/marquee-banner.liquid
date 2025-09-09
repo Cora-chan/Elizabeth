@@ -11,7 +11,7 @@
     {
       "type": "range",
       "id": "speed",
-      "label": "Scroll Speed",
+      "label": "Scroll Speed (1 = slowest)",
       "min": 1,
       "max": 10,
       "default": 2
@@ -20,40 +20,75 @@
       "type": "color",
       "id": "bg_color",
       "label": "Background Color",
-      "default": "#CEBCB4"
+      "default": "#1D1813"
     },
     {
       "type": "color",
       "id": "text_color",
       "label": "Text Color",
-      "default": "#000000"
+      "default": "#FFFFFF"
     }
-  ]
+  ],
+  "presets": [{ "name": "Marquee Banner" }]
 }
 {% endschema %}
 
-<div style="background-color: {{ section.settings.bg_color }};" class="w-full overflow-hidden">
-  <div id="marquee-text" class="inline-block whitespace-nowrap" style="color: {{ section.settings.text_color }};">
-    {{ section.settings.banner_text }}
+{% comment %} <div style="background-color: {{ section.settings.bg_color }};" class="w-full overflow-hidden">
+  <div id="marquee-container" class="inline-block whitespace-nowrap w-96" >
+    <span id="marquee-text" class="font-roboto inline-block pr-16" style="color: {{ section.settings.text_color }};">
+      {{ section.settings.banner_text }}
+    </span>
+    <span class="font-roboto inline-block pr-16" style="color: {{ section.settings.text_color }};">
+      {{ section.settings.banner_text }}
+    </span>
   </div>
-</div>
+</div> {% endcomment %}
 
-<script>
+
+<section class="p-4" style="background-color: {{ section.settings.bg_color }};">
+  <div id="marquee" class="flex overflow-hidden select-none">
+    <span class="marquee__content font-roboto shrink-0 flex justify-around min-w-full gap-4" aria-hidden="true" style="color: {{ section.settings.text_color }};">
+     {{ section.settings.banner_text }}
+    </span>
+    <span class="marquee__content font-roboto shrink-0 flex justify-around min-w-full gap-4" aria-hidden="true" style="color: {{ section.settings.text_color }};">
+      {{ section.settings.banner_text }}
+    </span>
+  </div>
+</section>
+
+<style>
+/* Add a smooth leftward animation */
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Apply animation to the ULs */
+#marquee .marquee__content {
+  animation: marquee-scroll 20s linear infinite;
+}
+</style>
+
+
+{% comment %} 
+{% comment %} <script>
 document.addEventListener('DOMContentLoaded', function() {
-  const ticker = document.getElementById('marquee-text');
+  const container = document.getElementById('marquee-container');
   const speed = {{ section.settings.speed }}; 
-
-  
-  ticker.innerHTML += ' • ' + ticker.innerHTML;
 
   let pos = 0;
   function scrollTicker() {
-    pos -= speed;
-    if (Math.abs(pos) >= ticker.scrollWidth / 2) pos = 0;
-    ticker.style.transform = `translateX(${pos}px)`;
+    pos -= speed * 0.3; // smoother speed, scales nicely
+    const containerWidth = container.scrollWidth / 2; // we duplicated text
+    if (Math.abs(pos) >= containerWidth) pos = 0; // reset only after one full width
+    container.style.transform = `translateX(${pos}px)`;
     requestAnimationFrame(scrollTicker);
   }
 
   scrollTicker();
-});
-</script>
+}); {% endcomment %}
+</script> {% endcomment %}

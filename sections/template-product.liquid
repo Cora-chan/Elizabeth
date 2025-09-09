@@ -55,16 +55,16 @@
                         {% case block.type %}
                             {% when 'vendor' %}
                                 <div class="my-3">
-                                    <span class="text-xs text-gray-500">{{ product.vendor }}</span>
+                                    <span class="text-xs text-white">{{ product.vendor }}</span>
                                 </div>
                             {% when 'title' %}
                                 <div class="my-3">
-                                    <h1 class="text-3xl text-gray-900">{{ product.title }}</h1>
+                                    <h1 class="text-3xl text-white">{{ product.title }}</h1>
                                 </div>
                             {% when 'price' %}
                                 <div class="my-3" id="price-{{ section.id }}">
-                                    <span class="text-base text-gray-500 line-through">{{ selected_variant.compare_at_price | money }}</span>
-                                    <span class="text-lg text-gray-900">{{ selected_variant.price | money }}</span>
+                                    <span class="text-base text-white line-through">{{ selected_variant.compare_at_price | money }}</span>
+                                    <span class="text-lg text-white">{{ selected_variant.price | money }}</span>
 
                                     {% if selected_variant.price < selected_variant.compare_at_price %}
                                         <span class="px-5 py-1 text-sm font-bold bg-red-500 rounded-full text-white mx-4">Sale</span>
@@ -115,7 +115,7 @@
                                 </div>
                             {% when 'description' %}
                                 <div class="my-3">
-                                    <p class="text-gray-700">{{ product.description }}</p>
+                                    <p class="text-white">{{ product.description }}</p>
                                 </div>
 
                             {% when 'checkout_buttons' %}
@@ -158,7 +158,7 @@
                 <div class="relative">
                     <div class="flex justify-between items-start p-5 border-b">
                         <h2 class="text-xl font-bold text-gray-700">3D Model Preview</h2>
-                        <button x-on:click="productModalOpen = false" class="text-gray-400 bg-transparent hover:text-gray-700 rounded text-sm p-2 ml-auto inline-flex items-center">
+                        <button x-on:click="productModalOpen = false" class="text-white bg-transparent hover:text-white rounded text-sm p-2 ml-auto inline-flex items-center">
                             {% render 'icon-close' %}
                         </button>
                     </div>
