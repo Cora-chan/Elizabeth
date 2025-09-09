@@ -35,8 +35,8 @@
       "type": "feature-statement",
       "name": "Feature Statement Banner",
       "settings": {
-        "heading": "Your Feature Statement Here",
-        "subheading": "Optional supporting text.",
+        "heading": "Trends evolve with time, but personal style remains timeless, shaped by mood, identity, and occasion. In today’s fashion landscape, sustainability and inclusivity are redefining what it means to be stylish. Designers blend heritage with innovation, crafting pieces that honor tradition while embracing modernity.",
+        "subheading": "----From ChatGPT",
         "background_color": "#967859",
         "text_color": "#ffffff"
       }
