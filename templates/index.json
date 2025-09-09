@@ -27,8 +27,8 @@
       "settings": {
         "banner_text": "Fashion is more than clothing—it’s a language of self-expression, culture, and creativity.",
         "speed": 2,
-        "bg_color": "#1D1813",
-        "text_color": "#FFFFFF"
+        "bg_color": "#1d1813",
+        "text_color": "#ffffff"
       }
     },
     "feature_statement_daktJW": {
@@ -48,12 +48,23 @@
         "featured_collection": "all",
         "number_of_products_to_show": 4
       }
+    },
+    "before_after_image_slider_jWb7bk": {
+      "type": "before-after-image-slider",
+      "name": "Image Comparison",
+      "settings": {
+        "before_image": "shopify://shop_images/minimalist-retail-clothing-display.jpg",
+        "after_image": "shopify://shop_images/large-fall-leaf-in-hand.jpg",
+        "before_label": "Discover the latest fashion",
+        "after_label": "Explore endless classics"
+      }
     }
   },
   "order": [
     "master_banner_Ut9cVa",
     "marquee_banner_PrQQVa",
     "feature_statement_daktJW",
-    "featured-collection"
+    "featured-collection",
+    "before_after_image_slider_jWb7bk"
   ]
 }
