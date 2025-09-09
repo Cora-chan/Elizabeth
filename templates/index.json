@@ -28,10 +28,21 @@
         "featured_collection": "all",
         "number_of_products_to_show": 4
       }
+    },
+    "feature_statement_daktJW": {
+      "type": "feature-statement",
+      "name": "Feature Statement Banner",
+      "settings": {
+        "heading": "Your Feature Statement Here",
+        "subheading": "Optional supporting text.",
+        "background_color": "#967859",
+        "text_color": "#ffffff"
+      }
     }
   },
   "order": [
     "master_banner_Ut9cVa",
+    "feature_statement_daktJW",
     "featured-collection"
   ]
 }
