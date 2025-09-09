@@ -25,7 +25,7 @@
       "type": "marquee-banner",
       "name": "Marquee Banner",
       "settings": {
-        "banner_text": "Fashion is more than clothing—it’s a language of self-expression, culture, and creativity.",
+        "banner_text": "Fashion is more than clothing",
         "speed": 2,
         "bg_color": "#1d1813",
         "text_color": "#ffffff"
