@@ -18,14 +18,15 @@
         "media_1": "https://cdn.shopify.com/videos/c/o/v/d422b3ff1b4442279ff3a20eb79f49ab.mp4",
         "media_1_type": "video",
         "media_2": "https://cdn.shopify.com/s/files/1/0882/1646/9802/files/pexels-godisable-jacob-226636-949670.jpg?v=1756831517",
-        "media_2_type": "image"
+        "media_2_type": "image",
+        "shop_all_url": "shopify://collections/all"
       }
     },
     "marquee_banner_PrQQVa": {
       "type": "marquee-banner",
       "name": "Marquee Banner",
       "settings": {
-        "banner_text": "Fashion is more than clothing",
+        "banner_text": "•Shop now •Shop now •Shop now •Shop now •Shop now •Shop now •Shop now •Shop now •Shop now •Shop now •Shop now •Shop now •Shop now •Shop now •Shop now",
         "speed": 2,
         "bg_color": "#1d1813",
         "text_color": "#ffffff"
