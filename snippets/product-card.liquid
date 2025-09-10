@@ -1,23 +1,43 @@
 <div class="w-full py-6 px-3">
-    <div class="border bg-leather shadow-lg rounded-lg overflow-hidden">
-        <a href="{{ product_product.url }}">
-            {% if product_product.featured_image %}
-                <div class="h-80 overflow-hidden">
-                    <img class="w-full h-full object-cover transition duration-1000 ease-in-out hover:scale-105 transform" src="{{ product_product.featured_image | img_url: 'medium' }}" alt="{{ product_product.featured_image.alt }}">
-                </div>
-                
-            {% else %}
-                {{ 'product-1' | placeholder_svg_tag: 'w-full h-full object-cover bg-gray-100' }}
-            {% endif %}
-        </a>
-        
-        <div class="flex flex-col p-4">
-            <span class="text-sm text-white">{{ product_product.vendor }}</span>
+  <div class="border bg-leather shadow-lg rounded-lg overflow-hidden">
+    
+    <a href="{{ product_product.url }}" class="relative block h-80 overflow-hidden">
+      {% if product_product.images.size > 0 %}
+        {% for image in product_product.images %}
+          <img 
+            class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-700 product-image"
+            src="{{ image | img_url: 'large' }}"
+            alt="{{ image.alt }}">
+        {% endfor %}
+      {% else %}
+        {{ 'product-1' | placeholder_svg_tag: 'w-full h-full object-cover bg-gray-100' }}
+      {% endif %}
+    </a>
 
-            <a href="{{ product_product.url }}" class="text-white uppercase font-medium">{{ product_product.title }}</a>
-
-            <p class="text-white">{{ product_product.price | money }}</p>
-        </div>
-        
+    <div class="flex flex-col p-4">
+      <span class="text-sm text-white">{{ product_product.vendor }}</span>
+      <a href="{{ product_product.url }}" class="text-white uppercase font-medium">{{ product_product.title }}</a>
+      <p class="text-white">{{ product_product.price | money }}</p>
     </div>
+
+  </div>
 </div>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".border.bg-leather").forEach((card) => {
+    const images = card.querySelectorAll(".product-image");
+    if (images.length > 1) {
+      let index = 0;
+      images[0].classList.add("opacity-100");
+
+      setInterval(() => {
+        images[index].classList.remove("opacity-100");
+        index = (index + 1) % images.length;
+        images[index].classList.add("opacity-100");
+      }, 2000); // 2 seconds
+    }
+  });
+});
+</script>
+

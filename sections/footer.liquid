@@ -59,48 +59,56 @@
 <footer class="bg-leather text-white">
   <div class="max-w-7xl mx-auto px-4 py-10">
     <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-      <!-- Logo and Footer Text -->
+      
+      <!-- Hardcoded Logo + Brand Text -->
       <div>
+       <div>
         {% if section.settings.footer_logo %}
           <img src="{{ section.settings.footer_logo | image_url: width: 200 }}" alt="Footer logo" class="mb-4">
         {% endif %}
         
       </div>
+        <p class="text-sm text-white/80">
+          We create premium, modern, and responsive Shopify stores that your customers will love.
+        </p>
+      </div>
 
-      <!-- Loop through blocks for menus and text columns -->
-      {% for block in section.blocks %}
-        {% case block.type %}
-          {% when 'menu' %}
-            <div>
-              {% assign menu = linklists[block.settings.menu] %}
-              {% if menu and menu.links.size > 0 %}
-                <h3 class="text-lg font-semibold mb-3 font-roboto text-white">{{ menu.title }}</h3>
-                <ul class="space-y-2">
-                  {% for link in menu.links %}
-                    <li>
-                      <a href="{{ link.url }}" class="text-white hover:text-white transition">
-                        {{ link.title }}
-                      </a>
-                    </li>
-                  {% endfor %}
-                </ul>
-              {% endif %}
-            </div>
+      
 
-          {% when 'text' %}
-            <div>
-              <h3 class="text-lg font-semibold mb-3 font-roboto text-white">{{ block.settings.heading }}</h3>
-              <div class="text-white text-sm">
-                {{ block.settings.content }}
-              </div>
-            </div>
-        {% endcase %}
-      {% endfor %}
+      <!-- Hardcoded Menu 1 -->
+      <div>
+        <h3 class="text-lg font-semibold mb-3 font-roboto text-white">Shop</h3>
+        <ul class="space-y-2">
+          <li><a href="/collections/all" class="hover:text-purple-300 transition">All Products</a></li>
+          <li><a href="/collections/new" class="hover:text-purple-300 transition">New Arrivals</a></li>
+          <li><a href="/collections/sale" class="hover:text-purple-300 transition">Sale</a></li>
+          <li><a href="/pages/contact" class="hover:text-purple-300 transition">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Hardcoded Menu 2 -->
+      <div>
+        <h3 class="text-lg font-semibold mb-3 font-roboto text-white">Customer Service</h3>
+        <ul class="space-y-2">
+          <li><a href="/pages/shipping" class="hover:text-purple-300 transition">Shipping Info</a></li>
+          <li><a href="/pages/returns" class="hover:text-purple-300 transition">Returns & Exchanges</a></li>
+          <li><a href="/pages/faq" class="hover:text-purple-300 transition">FAQ</a></li>
+          <li><a href="/pages/privacy-policy" class="hover:text-purple-300 transition">Privacy Policy</a></li>
+        </ul>
+      </div>
+
+      <!-- Hardcoded Contact Info -->
+      <div>
+        <h3 class="text-lg font-semibold mb-3 font-roboto text-white">Get in Touch</h3>
+        <p class="text-sm mb-2">123 Shopify Street, Melbourne, AU</p>
+        <p class="text-sm mb-2">Email: <a href="mailto:support@yourstore.com" class="hover:text-purple-300 transition">support@yourstore.com</a></p>
+        <p class="text-sm">Phone: <a href="tel:+61000000000" class="hover:text-purple-300 transition">+61 00 0000 000</a></p>
+      </div>
     </div>
 
     <!-- Bottom Bar -->
-    <div class="mt-8 pt-6 border-t border-white text-center text-sm text-white">
-      {{ section.settings.footer_text }}
+    <div class="mt-8 pt-6 border-t border-white/30 text-center text-sm text-white/70">
+      © {{ 'now' | date: '%Y' }} Your Store Name. All rights reserved. Built with ❤️ on Shopify.
     </div>
   </div>
 </footer>
